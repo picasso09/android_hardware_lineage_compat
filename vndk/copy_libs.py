@@ -12,6 +12,7 @@ for vndk_version, libs in {
     "v32": [
         "libhidlbase",
         "libutils",
+        "libcrypto",
     ],
     "v33": [
         "libbase",

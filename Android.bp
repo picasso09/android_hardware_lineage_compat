@@ -208,6 +208,23 @@ cc_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcrypto-v32",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["vndk/v32/arm/libcrypto-v32.so"],
+        },
+        android_arm64: {
+            srcs: ["vndk/v32/arm64/libcrypto-v32.so"],
+        },
+    },
+    compile_multilib: "both",
+}
+
+cc_prebuilt_library_shared {
     name: "libcrypto-v33",
     vendor: true,
     strip: {
